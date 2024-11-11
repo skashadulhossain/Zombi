@@ -1,0 +1,129 @@
+/* ZombieFAQSection.css */
+.zombie-faq-section {
+    min-height: 100vh;
+    background-color: #000000;
+    position: relative;
+    padding: 4rem 2rem;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .zombie-faq-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .zombie-faq-title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 0px #ff0000;
+  }
+  
+  .zombie-faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .zombie-faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .zombie-faq-question {
+    padding: 1.5rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .zombie-faq-icon {
+    color: #ff0000;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .zombie-faq-item.active .zombie-faq-icon {
+    transform: rotate(45deg);
+  }
+  
+  .zombie-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .zombie-faq-item.active .zombie-faq-answer {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+  
+  .zombie-answer-content {
+    padding: 0 0 1.5rem 0;
+    color: #cccccc;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .zombie-faq-section {
+      padding: 2rem 1rem;
+    }
+  
+    .zombie-faq-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .zombie-faq-question {
+      font-size: 1rem;
+      padding: 1rem 0;
+    }
+  }
+  
+  /* Add glitch effect to title */
+  .zombie-faq-title span {
+    position: relative;
+  }
+  
+  .zombie-faq-title span::before,
+  .zombie-faq-title span::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .zombie-faq-title span::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff0000;
+    animation: glitch-1 2s infinite linear alternate-reverse;
+  }
+  
+  .zombie-faq-title span::after {
+    left: -2px;
+    text-shadow: 2px 0 #0000ff;
+    animation: glitch-2 2s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-1 {
+    0% { clip-path: inset(20% 0 30% 0); }
+    100% { clip-path: inset(10% 0 40% 0); }
+  }
+  
+  @keyframes glitch-2 {
+    0% { clip-path: inset(40% 0 10% 0); }
+    100% { clip-path: inset(30% 0 20% 0); }
+  }

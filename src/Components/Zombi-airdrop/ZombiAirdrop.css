@@ -1,0 +1,88 @@
+
+:root {
+    --primary-white: #fff;
+    --primary-red: #ff0202;
+    --primary-white2:#ffebeb;
+}
+
+
+.ZombiAirdrop-section{
+    height: 100vh;
+    display: flex;
+    padding: 1rem 20px;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./Image/Airdrop\ bg.png);   
+}
+
+.ZombiAirdrop-container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ZombiAirdrop-title-box h1{
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    color: var(--primary-white2);
+    text-shadow: 4px 4px 0 #f006;
+}
+
+.ZombiAirdrop-title-box span{
+    gap: 8px;
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+    align-items:center;
+    margin-bottom: 40px;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--primary-white2);
+    text-shadow: 4px 4px 0 #f006;
+}
+
+.ZombiAirdrop-title-icon{
+    font-size: 22px;
+    color: var(--primary-red);
+}
+
+.ZombiAirdrop-img-container{
+    width: 100%;
+    height: 437px;
+    max-width: 650px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./Image/Airdrop\ img.png);
+}
+
+.ZombiAirdrop-container button{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    max-width: 550px;
+    font-weight: bold;
+    padding: 15px 14px;
+    color: var(--primary-white);
+    background-color: var(--primary-red);
+}
+
+
+@media (max-width: 768px){
+    .ZombiAirdrop-section{
+        height: auto;
+        padding: 3rem 20px;
+    }
+}

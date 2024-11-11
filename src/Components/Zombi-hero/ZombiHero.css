@@ -1,0 +1,67 @@
+
+:root {
+    --primary-white: #fff;
+    --primary-red: #ff0202;
+    --primary-white2:#ffebeb;
+}
+
+
+.ZombiHero-section{
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./Image/Hero\ bg.jpg);
+}
+
+.ZombiHero-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-35%);
+}
+
+.ZombiHero-title-box{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ZombiHero-title-box h1{
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    color: var(--primary-white2);
+    text-shadow: 4px 4px 0 #f006;
+}
+
+.ZombiHero-title-box button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px 14px;
+    color: var(--primary-white);
+    background-color: var(--primary-red);
+}
+
+.ZombiHero-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ZombiHero-img-container img{
+    width: 100%;
+    max-width: 280px;
+}
+
+@media (max-width: 1024px){
+    .ZombiHero-container{
+        transform: translate(-50%,-43%);
+    }
+    .ZombiHero-img-container img{
+        max-width: 250px;
+    }
+}

@@ -1,0 +1,154 @@
+/* TokenStats.css */
+.zombie-stats-section {
+    background-color: #000000;
+    padding: 60px 20px;
+    overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .zombie-stats-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+  }
+  
+  .zombie-stat-item {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+  }
+  
+  .zombie-stat-number {
+    font-size: 64px;
+    font-weight: 700;
+    color: #FF0000;
+    line-height: 1;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+  }
+  
+  .zombie-stat-content {
+    flex-grow: 1;
+    padding-top: 8px;
+  }
+  
+  .zombie-stat-content h3 {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .zombie-stat-content p {
+    color: #FFFFFF;
+    margin: 5px 0 0;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  
+  /* Red glow effect for numbers */
+  .zombie-stat-number::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(255,0,0,0.2) 0%, rgba(255,0,0,0) 70%);
+    z-index: -1;
+  }
+  
+  /* Hover effect */
+  .zombie-stat-item:hover .zombie-stat-number {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .zombie-stats-container {
+      flex-direction: column;
+      gap: 30px;
+      max-width: 600px;
+    }
+  
+    .zombie-stat-item {
+      padding: 20px;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+    }
+  
+    .zombie-stat-item:last-child {
+      border-bottom: none;
+    }
+  
+    .zombie-stat-number {
+      font-size: 48px;
+    }
+  
+    .zombie-stat-content h3,
+    .zombie-stat-content p {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .zombie-stats-section {
+      padding: 40px 15px;
+    }
+  
+    .zombie-stat-number {
+      font-size: 36px;
+    }
+  
+    .zombie-stat-content h3,
+    .zombie-stat-content p {
+      font-size: 16px;
+    }
+  }
+  
+  /* Animation for numbers */
+  @keyframes numberGlow {
+    0% {
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+  }
+  
+  .zombie-stat-number {
+    animation: numberGlow 2s infinite;
+  }
+  
+  /* Add line separators between stats for desktop */
+  @media (min-width: 1025px) {
+    .zombie-stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 0, 0, 0.5),
+        transparent
+      );
+    }
+  }
